@@ -1,0 +1,121 @@
+/* Reset básico */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* Layout */
+.sidebar {
+    width: 220px;
+    background-color: #004225; /* verde oscuro */
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #026440; /* verde más claro */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.sidebar button:hover {
+    background-color: #039f6e;
+}
+
+.sidebar hr {
+    border: 1px solid #7e7e7e;
+    margin: 20px 0;
+}
+
+.contenido {
+    margin-left: 240px;
+    padding: 20px;
+}
+
+/* Títulos */
+h1, h2 {
+    color: #004225;
+}
+
+/* Formulario de búsqueda */
+form {
+    margin-bottom: 20px;
+}
+
+form label, form select, form input {
+    margin-right: 10px;
+}
+
+form input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+th {
+    background-color: #004225;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Inputs y selects en tabla */
+table input, table select {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Botón guardar */
+button[type="submit"] {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #FFD700; /* amarillo */
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button[type="submit"]:hover {
+    background-color: #f4c542;
+}
+
+/* Mensaje si no hay resultados */
+table td[colspan] {
+    text-align: center;
+    color: #7e7e7e;
+    font-style: italic;
+}
+
