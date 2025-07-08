@@ -47,6 +47,7 @@ $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <thead>
             <tr>
                 <th>Nombre</th>
+                <th>Apellido</th>
                 <th>Modelo</th>
                 <th>Patente</th>
                 <th>Pago</th>
@@ -60,6 +61,7 @@ $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <?php foreach ($clientes as $c): ?>
                 <tr>
                     <td><input name="nombre[<?= $c['id'] ?>]" value="<?= htmlspecialchars($c['nombre']) ?>"></td>
+                    <td><input name="apellido[<?= $c['id'] ?>]" value="<?= htmlspecialchars($c['apellido']) ?>"></td>
                     <td><input name="modelo[<?= $c['id'] ?>]" value="<?= htmlspecialchars($c['modelo']) ?>"></td>
                     <td><input name="patente[<?= $c['id'] ?>]" value="<?= htmlspecialchars($c['patente']) ?>"></td>
                     <td>

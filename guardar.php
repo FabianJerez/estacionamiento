@@ -1,6 +1,24 @@
 <?php
 require_once 'conexion.php';
 
+// Nuevo cliente
+if (!empty($_POST['nuevo']['nombre']) && !empty($_POST['nuevo']['apellido'])) {
+    $stmt = $conn->prepare("
+        INSERT INTO clientes 
+        (nombre, apellido, modelo, patente, pago, telefono, direccion, estado)
+        VALUES (:nombre, :apellido, :modelo, :patente, :pago, :telefono, :direccion, 'activo')
+    ");
+    $stmt->execute([
+        ':nombre' => $_POST['nuevo']['nombre'],
+        ':apellido' => $_POST['nuevo']['apellido'],
+        ':modelo' => $_POST['nuevo']['modelo'],
+        ':patente' => $_POST['nuevo']['patente'],
+        ':pago' => $_POST['nuevo']['pago'],
+        ':telefono' => $_POST['nuevo']['telefono'],
+        ':direccion' => $_POST['nuevo']['direccion'],
+    ]);
+}
+
 // Recorremos los datos enviados desde el formulario
 foreach ($_POST['nombre'] as $id => $nombre) {
     // Preparamos la consulta de actualización

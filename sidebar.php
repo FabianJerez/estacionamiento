@@ -14,11 +14,6 @@
     </form>
 
     <form action="exportar.php" method="POST">
-        <input type="hidden" name="formato" value="excel">
-        <button type="submit">Exportar Excel</button>
-    </form>
-
-    <form action="exportar.php" method="POST">
         <input type="hidden" name="formato" value="word">
         <button type="submit">Exportar Word</button>
     </form>

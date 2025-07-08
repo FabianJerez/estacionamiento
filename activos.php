@@ -47,6 +47,7 @@ $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <thead>
             <tr>
                 <th>Nombre</th>
+                <th>Apellido</th>
                 <th>Modelo</th>
                 <th>Patente</th>
                 <th>Pago</th>
@@ -54,12 +55,14 @@ $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <th>Dirección</th>
                 <th>Estado</th>
             </tr>
+
         </thead>
         <tbody>
         <?php if (count($clientes) > 0): ?>
             <?php foreach ($clientes as $c): ?>
                 <tr>
                     <td><input name="nombre[<?= $c['id'] ?>]" value="<?= htmlspecialchars($c['nombre']) ?>"></td>
+                    <td><input name="apellido[<?= $c['id'] ?>]" value="<?= htmlspecialchars($c['apellido']) ?>"></td>
                     <td><input name="modelo[<?= $c['id'] ?>]" value="<?= htmlspecialchars($c['modelo']) ?>"></td>
                     <td><input name="patente[<?= $c['id'] ?>]" value="<?= htmlspecialchars($c['patente']) ?>"></td>
                     <td>
@@ -78,6 +81,21 @@ $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     </td>
                 </tr>
             <?php endforeach; ?>
+            <tr>
+                <td><input name="nuevo[nombre]" placeholder="Nuevo nombre"></td>
+                <td><input name="nuevo[apellido]" placeholder="Nuevo apellido"></td>
+                <td><input name="nuevo[modelo]" placeholder="Nuevo modelo"></td>
+                <td><input name="nuevo[patente]" placeholder="Nuevo patente"></td>
+                <td>
+                    <select name="nuevo[pago]">
+                        <option value="0">No</option>
+                        <option value="1">Sí</option>
+                    </select>
+                </td>
+                <td><input name="nuevo[telefono]" placeholder="Nuevo teléfono"></td>
+                <td><input name="nuevo[direccion]" placeholder="Nueva dirección"></td>
+            </tr>
+
         <?php else: ?>
             <tr><td colspan="7">No se encontraron clientes activos.</td></tr>
         <?php endif; ?>
