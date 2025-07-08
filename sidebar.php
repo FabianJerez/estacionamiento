@@ -1,25 +1,30 @@
 <div class="sidebar">
-    <a href="activos.php">
-        <button>Clientes Activos</button>
-    </a>
-    <a href="inactivos.php">
-        <button>Clientes Inactivos</button>
-    </a>
+    <form action="activos.php" method="get">
+        <button type="submit" class="sidebar-btn">Clientes Activos</button>
+    </form>
+
+    <form action="inactivos.php" method="get">
+        <button type="submit" class="sidebar-btn">Clientes Inactivos</button>
+    </form>
 
     <hr>
 
-    <form action="exportar.php" method="POST">
+    <form action="exportar.php" method="post">
         <input type="hidden" name="formato" value="csv">
-        <button type="submit">Exportar CSV</button>
+        <input type="hidden" name="estado" value="activo">
+        <button type="submit" class="sidebar-btn">Exportar CSV</button>
     </form>
 
-    <form action="exportar.php" method="POST">
+    <form action="exportar.php" method="post">
         <input type="hidden" name="formato" value="word">
-        <button type="submit">Exportar Word</button>
+        <input type="hidden" name="estado" value="activo">
+        <button type="submit" class="sidebar-btn">Exportar Word</button>
     </form>
 
-    <form action="exportar.php" method="POST">
+    <form action="exportar.php" method="post">
         <input type="hidden" name="formato" value="imprimir">
-        <button type="submit">Imprimir</button>
+        <input type="hidden" name="estado" value="activo">
+        <button type="submit" class="sidebar-btn">Imprimir</button>
     </form>
 </div>
+

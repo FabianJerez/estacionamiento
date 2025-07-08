@@ -17,21 +17,22 @@ body {
     left: 0;
 }
 
-.sidebar button {
+.sidebar .sidebar-btn {
     display: block;
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: none;
-    background-color: #026440; /* verde más claro */
+    background-color: #026440; /* verde oscuro */
     color: white;
-    cursor: pointer;
+    text-align: center;
     font-weight: bold;
+    cursor: pointer;
+    border: none;
     border-radius: 4px;
 }
 
-.sidebar button:hover {
-    background-color: #039f6e;
+.sidebar .sidebar-btn:hover {
+    background-color: #039f6e; /* verde claro */
 }
 
 .sidebar hr {
@@ -119,3 +120,19 @@ table td[colspan] {
     font-style: italic;
 }
 
+.titulo-principal {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #B22222; /* rojo */
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+.titulo-principal {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    color: #B22222; /* rojo */
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}

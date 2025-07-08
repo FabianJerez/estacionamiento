@@ -26,6 +26,8 @@ $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
 
+    <h1 class="titulo-principal">Garage Escribano</h1>
+
 <?php include 'sidebar.php'; ?>
 
 <div class="contenido">
